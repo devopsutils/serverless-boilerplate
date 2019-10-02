@@ -26,6 +26,11 @@ plugins:
   - serverless-offline
 
 package:
+  excludeDevDependencies: false
   exclude:
+    - node_modules/**
+    - '!node_modules/slugify/**'
     - ./__test__/**
     - ./.nvmrc
+    - ./config/**
+    - ./handlers/**
