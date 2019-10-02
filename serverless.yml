@@ -2,8 +2,8 @@ service: serverless-boilerplate
 provider:
   name: aws
   runtime: nodejs10.x
-  stage: dev
-  region: localhost
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'eu-central-1'}
   environment: #Global Environment variables
     ${file(./config/${self:provider.stage}.yml)}
 
@@ -11,11 +11,12 @@ functions:
   ${file(./handlers/endpoints/index.yml)}
 
 custom:
+  region: ${self:provider.region}
   stage: ${opt:stage, self:provider.stage}
-  region: ${opt:region, self:provider.region}
+  prefix: ${self:custom.stage}-${self:service}
 
   serverless-offline:
-    host: '10.10.10.10'
+    host: '0.0.0.0'
     port: '4000'
 
 plugins:

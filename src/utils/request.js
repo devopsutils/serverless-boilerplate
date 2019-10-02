@@ -1,6 +1,2 @@
-module.exports.getBody = (data) => {
-    return JSON.parse(data.body);
-};
-module.exports.getAuthToken = (data) => {
-    return data.headers['x-authentication'] || '';
-};
+module.exports.getBody = (data) => JSON.parse(data.body);
+module.exports.getAuthToken = (data) => data.headers['x-authentication'] || null;
