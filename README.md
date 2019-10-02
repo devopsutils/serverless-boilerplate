@@ -48,6 +48,7 @@ You can get started quickly with:
 ```bash
 git clone https://github.com/mariancraciun1983/serverless-boilerplate.git
 nvm use
+# skip this to use npx serverless in the local folder
 npm install -g serverless
 yarn
 yarn run dev
@@ -101,6 +102,8 @@ yarn run package:prod
 
 # run deploy manually with custom params
 serverless package --region us-east-1
+# or
+npx serverless package --region us-east-1
 ```
 ## Deployment
 
@@ -157,7 +160,15 @@ When you're done with this project, you can easily remove all resources created 
 ```bash
 
 serverless remove --stage prod #or dev
+# or
+npx serverless remove --stage prod #or dev
 
+```
 
+#Others
+You could configure the region,app-name and the stage via command line. This is useful in a CI/CD:
+
+```bash
+npx serverless deploy --name serverless-boilerplate-ci --region eu-central-1 --stage dev
 ```
 
