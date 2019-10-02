@@ -5,4 +5,4 @@ node_modules
 .vscode
 yarn-error.log
 npm-debug.log
-__test__/jest/coverage/
+__test__/coverage/
