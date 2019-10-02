@@ -1,19 +1,19 @@
 {
-    "plugins": ["jest"],
-    "parser": "babel-eslint",
-    "extends": [
-      "eslint:recommended",
-      "plugin:jest/recommended"
-    ],
-    "rules": {
-      "jest/no-disabled-tests": "warn",
-      "jest/no-focused-tests": "error",
-      "jest/no-identical-title": "error",
-      "jest/prefer-to-have-length": "warn",
-      "jest/prefer-expect-assertions": "warn",
-      "jest/no-export": "warn",
-      "jest/expect-expect": "warn",
-      "jest/no-test-return-statement": "warn",
-      "jest/valid-expect": "error"
-    }
+  "plugins": ["jest"],
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:jest/recommended"
+  ],
+  "rules": {
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/prefer-expect-assertions": "warn",
+    "jest/no-export": "warn",
+    "jest/expect-expect": "warn",
+    "jest/no-test-return-statement": "warn",
+    "jest/valid-expect": "error"
   }
+}
