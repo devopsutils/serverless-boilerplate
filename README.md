@@ -23,7 +23,7 @@
 		<img src="https://badges.greenkeeper.io/mariancraciun1983/serverless-boilerplate.svg" alt="Greenkeeper badge" />
 	</a>
 	<a href="https://bettercodehub.com/">
-		<img src="https://bettercodehub.com/edge/badge/mariancraciun1983/npm-boilerplate?branch=master" alt="BCH compliance" />
+		<img src="https://bettercodehub.com/edge/badge/mariancraciun1983/serverless-boilerplate?branch=master" alt="BCH compliance" />
 	</a>
 	<a href="https://codebeat.co/projects/github-com-mariancraciun1983-serverless-boilerplate-master">
 		<img src="https://codebeat.co/badges/ff609ebe-e3db-409f-a833-4b6a7c557ef0" alt="codebeat badge" />
