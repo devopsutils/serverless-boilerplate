@@ -1,0 +1,10 @@
+
+  genres-list:
+    handler: src/endpoints/genres.get_list
+    timeout: 30
+    events:
+      - http:
+          path: api/genres
+          method: get
+          cors:
+            ${file(./handlers/endpoints/inc/cors.yml)}

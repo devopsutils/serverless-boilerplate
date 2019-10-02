@@ -1,0 +1,29 @@
+  auth-login:
+    handler: src/endpoints/auth.login
+    timeout: 30
+    events:
+      - http:
+          path: api/auth/login
+          method: post
+          cors:
+            ${file(./handlers/endpoints/inc/cors.yml)}
+
+  auth-register:
+    handler: src/endpoints/auth.register
+    timeout: 30
+    events:
+      - http:
+          path: api/auth/register
+          method: post
+          cors:
+            ${file(./handlers/endpoints/inc/cors.yml)}
+
+  auth-token:
+    handler: src/endpoints/auth.token
+    timeout: 30
+    events:
+      - http:
+          path: api/auth/token
+          method: post
+          cors:
+            ${file(./handlers/endpoints/inc/cors.yml)}

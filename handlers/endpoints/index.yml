@@ -1,0 +1,4 @@
+- ${file(./handlers/endpoints/auth.yml)}
+- ${file(./handlers/endpoints/genres.yml)}
+- ${file(./handlers/endpoints/movies.yml)}
+- ${file(./handlers/endpoints/cart.yml)}

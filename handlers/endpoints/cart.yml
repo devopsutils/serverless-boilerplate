@@ -1,0 +1,19 @@
+
+  cart-get:
+    handler: src/endpoints/cart.get
+    timeout: 30
+    events:
+      - http:
+          path: api/cart
+          method: get
+          cors:
+            ${file(./handlers/endpoints/inc/cors.yml)}
+  cart-set:
+    handler: src/endpoints/cart.set
+    timeout: 30
+    events:
+      - http:
+          path: api/cart
+          method: post
+          cors:
+            ${file(./handlers/endpoints/inc/cors.yml)}

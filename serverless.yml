@@ -1,0 +1,27 @@
+service: serverless-boilerplate
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  region: localhost
+  environment: #Global Environment variables
+    ${file(./config/${self:provider.stage}.yml)}
+
+functions:
+  ${file(./handlers/endpoints/index.yml)}
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  region: ${opt:region, self:provider.region}
+
+  serverless-offline:
+    host: '10.10.10.10'
+    port: '4000'
+
+plugins:
+  - serverless-offline
+
+package:
+  exclude:
+    - ./__test__/**
+    - ./.nvmrc

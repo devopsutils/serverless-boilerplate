@@ -1,0 +1,10 @@
+
+  movies-list:
+    handler: src/endpoints/movies.get_list
+    timeout: 30
+    events:
+      - http:
+          path: api/movies
+          method: get
+          cors:
+            ${file(./handlers/endpoints/inc/cors.yml)}
