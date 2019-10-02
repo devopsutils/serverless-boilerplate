@@ -6,10 +6,9 @@
   "scripts": {
     "dev": "serverless offline start --stage dev",
     "lint": "eslint src __test__",
-    "test": "npm-run-all --parallel test:jest test:sls",
-    "test:sls": "serverless package --stage dev",
-    "test:jest": "jest -c __test__/.jest.config.js --coverage",
+    "test": "jest -c __test__/.jest.config.js --coverage",
     "test:watch": "jest -c __test__/.jest.config.js  --watch --coverage",
+    "test:sls": "serverless package --stage dev",
     "package:prod": "serverless package --stage prod",
     "deploy:dev": "serverless deploy --stage dev",
     "deploy:prod": "serverless deploy --stage prod",
@@ -40,7 +39,6 @@
     "husky": "^3.0.8",
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
-    "npm-run-all": "^4.1.5",
     "serverless": "^1.53.0",
     "serverless-offline": "^5.12.0"
   },

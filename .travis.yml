@@ -11,6 +11,7 @@ install:
 script:
     - yarn run lint
     - yarn run test
+#    - yarn run test:sls
 
 after_script:
     - yarn run coveralls
