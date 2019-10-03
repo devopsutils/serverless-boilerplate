@@ -1,6 +1,9 @@
 <h1 align="center">Serverless BoilerPlate</h1>
 
 <div align="center">
+	<a href="https://serverless.com">
+		<img src="http://public.serverless.com/badges/v3.svg" alt="Serverless" />
+	</a>
 	<a href="https://travis-ci.org/mariancraciun1983/serverless-boilerplate">
 		<img src="https://secure.travis-ci.org/mariancraciun1983/serverless-boilerplate.svg?branch=master" alt="Travis CI" />
 	</a>
