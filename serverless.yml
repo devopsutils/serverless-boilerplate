@@ -1,4 +1,4 @@
-service: ${opt:name, 'serverless-boilerplate'}
+service: ${self:custom.serviceName}
 provider:
   name: aws
   runtime: nodejs10.x
@@ -7,6 +7,16 @@ provider:
   timeout: 6
   stage: ${opt:stage, 'dev'}
   region: ${opt:region, 'eu-central-1'}
+
+  usagePlan:
+    quota:
+      limit: 100
+      offset: 2
+      period: MONTH
+    throttle:
+      burstLimit: 10
+      rateLimit: 5
+
   environment: #Global Environment variables
     ${file(./config/${self:provider.stage}.yml)}
 
@@ -14,6 +24,7 @@ functions:
   ${file(./handlers/endpoints/index.yml)}
 
 custom:
+  serviceName: ${opt:name, 'serverless-boilerplate'}
   region: ${self:provider.region}
   stage: ${opt:stage, self:provider.stage}
   prefix: ${self:custom.stage}-${self:service}
