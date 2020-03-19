@@ -43,6 +43,6 @@
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
     "serverless": "^1.53.0",
-    "serverless-offline": "^5.12.0"
+    "serverless-offline": "^6.0.0"
   }
 }
